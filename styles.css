@@ -1,5 +1,13 @@
 //Author: Angela Valenzuela
 
 body{
+	background-color: white;
+}
+
+#toggleMe {
 	background-color: pink;
+}
+
+#toggleMe.metal{
+	background-color: red;
 }
