@@ -1,4 +1,4 @@
-//Author: Angela Valenzuela
+/*Author: Angela Valenzuela*/
 
 body{
 	background-color: white;
@@ -10,4 +10,8 @@ body{
 
 #toggleMe.metal{
 	background-color: red;
+}
+
+#viewDetails.hide{
+
 }
