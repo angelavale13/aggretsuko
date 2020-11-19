@@ -12,12 +12,35 @@ document.getElementById('toggleMe').addEventListener('click', function(){
 
 
 //Display by default on page load and only one product should ever display on the screen at a time
-document.getElementById('viewDetails').addEventListener('click', function(){
-	this.classList.toggle('hide');
-});
 
+//get three different products and store in variables
+let product1 = document.getElementById("product1");
+let product2 = document.getElementById("product2");
+let product3 = document.getElementById("product3");
+//window.alert("alert");
+function toggleProduct1(){
+	
+	product1.classList.remove('hidden');
+	product2.classList.add('hidden');
+	product3.classList.add('hidden');
+}
+document.getElementById('product1-name').addEventListener('click', toggleProduct1);
 
+function toggleProduct2(){
+	
+	product1.classList.add('hidden');
+	product2.classList.remove('hidden');
+	product3.classList.add('hidden');
+}
+document.getElementById('product2-name').addEventListener('click', toggleProduct2);
 
+function toggleProduct3(){
+	
+	product1.classList.add('hidden');
+	product2.classList.add('hidden');
+	product3.classList.remove('hidden');
+}
+document.getElementById('product3-name').addEventListener('click', toggleProduct3);
 
 
 
