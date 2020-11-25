@@ -1,13 +1,61 @@
 /*Author: Angela Valenzuela*/
-
-body{
-	background-color: white;
+h1{
+	visibility: hidden;
 }
 
-#toggleMe {
+li{
+	list-style-type: none;
+	display: inline;
+	color: #707070;
+	font-family: rosella-solid, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.5em;
+}
+
+a:link{
+	text-decoration: none;
+}
+
+a:visited{
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+a:active{
+	text-decoration: underline;
+}
+
+header, nav, section{
+	background-color: #FFE2E2;
+}
+
+#toggleMe{
 	background-color: pink;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-gap: 10px;
 }
 
+.span1{
+	grid-column: 1 / 7;
+	
+}
+
+.span2{
+	grid-column: 8 / 10;
+}
+
+.span3{
+	grid-column: 8 / 10;
+}
+
+#sButton{
+	padding: 10px;
+}
 #toggleMe.metal{
 	background-color: red;
 }
@@ -18,24 +66,112 @@ body{
 
 .grid-container{
 	display: grid;
-	grid-template-columns: auto auto auto;
+	max-width:80%; 
+	grid-template-columns: 7fr 3fr;
 	background-color: white;
+	margin: 0 auto;
 
 }
 
-.grid-item {
+/*.grid-item{
 	background-color: pink;
 	border: 1px solid red;
 	padding: 10px;
 	font-size: 30px;
+	grid-column: 1 / 13;
+
+}*/
+
+.grid-detail1{
+	display:block;
+	width: 100%;
+	padding:1em;
+}
+
+.grid-detail2{
+	display:block;
+	padding:1em;
+	/*grid-column-start: 7;
+  	grid-column-end: 12;*/
+}
+
+.grid-container h4{
+	font-family: rosella-solid, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.5em;
+	text-align: center;
 
 }
 
-.grid-detail {
-	grid-column-start: 1;
-  	grid-column-end: 4;
+.grid-container p{
+	padding:1em;
+	line-height: 1.5;
 }
 
-.hidden {
+.hidden{
 	display: none;
+}
+
+form{
+	width: 320px;
+	margin: 0 auto;
+	padding: 0.5em;
+	font-size: 1em;
+}
+
+label{
+	display: block;
+	margin: 0.75em auto 0 auto;
+}
+
+input{
+	display: block;
+	width: 100%;
+	padding: 0.5em;
+}
+
+span{
+	display: inline;
+	height: 1.5em;
+	color: red;
+}
+
+fieldset{
+	width: 100%;
+	margin: 1em auto 0.5em auto;
+}
+
+legend{
+	font-size: 1.2em;
+}
+
+fieldset label{
+	display: inline;
+}
+
+fieldset input{
+	display: inline;
+	width: 5%;
+	margin-left: 3em;
+}
+
+fieldset + span{
+	display: block;
+	margin-bottom: 0.5em;
+	text-align: center;
+}
+
+#mySubmit{
+	padding: 0.75em;
+	width: 50%;
+	margin: 1em auto;
+}
+
+.pointer{
+	cursor: pointer;
+}
+
+.pointer:hover{
+	text-decoration: underline; 
 }

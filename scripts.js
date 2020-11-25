@@ -1,8 +1,8 @@
 //Author: Angela Valenzuela
 
 //toggle button start
-document.getElementById('toggleMe').addEventListener('click', function(){
-	this.classList.toggle('metal');
+document.getElementById('sButton').addEventListener('click', function(){
+	document.getElementById('toggleMe').classList.toggle('metal');
 });
 
 

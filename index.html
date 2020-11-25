@@ -4,58 +4,83 @@
 		<meta charset="utf-8">
 		<title>Aggretsuko</title>
 		<meta name="author" content="Angela Valenzuela">
+		<link rel="stylesheet" href="https://use.typekit.net/gtm7ueb.css">
 		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
-		<header><h1>Aggretsuko</h1></header>
-		<nav>
-			<ul>
-				<li>Home</li>
-				<li>Product</li>
-				<li>Contest</li>
-			</ul>
-		</nav>
+		<header><h1>Aggretsuko</h1>
+			<nav>
+				<ul>
+					<a href="#top"><li>Home</li></a><li> // </li>
+					<a href="#friend"><li>Friends</li></a><li> // </li>
+					<a href="#lottery"><li>Office Lottery</li></a><li> // </li>
+					<a href="#contact"><li>Contact Us</li></a>
+				</ul>
+			</nav>
+		</header>
+
 		<section id="toggleMe">
-			<h2>Toggle Function</h2>
-			<button type="button" name="sButton" id="sButton">To the metal</button>
+			<a name='top'></a>
+			<img class="span1" src="./media/placeHolderAggretsuko.png">
+			<img class="span2" src="./media/retsuko.png">
+			<button  class="span3" type="button" name="sButton" id="sButton">Go to Karaoke</button>
 		</section>
-		<section class="grid-container"> <!--Click on a control that includes the product name-->
-			<section class ="grid-item"><a href="#"><h3 id="product1-name">Number 1</h3></a></section>
-			<section class ="grid-item"><h3 id="product2-name">Number 2</h3></section>
-			<section class ="grid-item"><h3 id="product3-name">Number 3</h3></section>
-			<section class="grid-item hidden grid-detail" id="product1">
-				
-				<!--image here--><img src="https:www.clipartmax.com/png/small/215-2156918_i-cant-believe-this-is-the-first-thing-i-am-contributing-retsuko.png">
-				<h4>Number 1</h4>
-				<p>Number 1, This is the product description</p>
-			</section>
-			<section class="grid-item grid-detail" id="product2">
-				
-				<!--image here--><img src="https:www.clipartmax.com/png/small/215-2156918_i-cant-believe-this-is-the-first-thing-i-am-contributing-retsuko.png">
-				<h4>Number 2</h4>
-				<p>Number 2, This is the product description</p>
-			</section>
-			<section class="grid-item hidden grid-detail" id="product3">
-				
-				<!--image here--><img src="https:www.clipartmax.com/png/small/215-2156918_i-cant-believe-this-is-the-first-thing-i-am-contributing-retsuko.png">
-				<h4>Number 3</h4>
-				<p>Number 3,This is the product description</p>
-			</section>
-		</section>
+		<ul>
+			<li class="pointer" id="product1-name">gori</li><li> // </li>
+			<li class="pointer"  id="product2-name">washimi</li><li> // </li>
+			<li class="pointer"  id="product3-name">fenneko</li>
+		</ul>
 		<section>
+			<section class="grid-item hidden grid-container" id="product1">
+				<img class="grid-detail1" src="http://via.placeholder.com/600x480">
+				<section class="grid-detail2">
+				<h4>Gori</h4>
+					<p>This female director of marketing is talented and hardworking. She is a daunting figure on the outside, but is surprisingly delicate on the inside and often finds it hard to say what is on her mind. She dresses in cool, conservative fashion, but comments about her physical appearance hurt and she frequently cries herself to sleep at night.</p>
+				</section>
+			</section>
+
+			<section class="grid-item grid-container" id="product2">
+				<img class="grid-detail1" src="http://via.placeholder.com/600x480">
+				<section class="grid-detail2">
+					<h4>Washimi</h4>
+					<p>She's the talented and beautiful secretary of the President that has a knack for being able to meet all his needs. However, she is fed up with his mental weakness and the way he treats people. She is cool under pressure at work, but will 'let her feathers down' when it comes to the opposit sex. On dates, she uses her long legs to wow potential suitors, even though she soon tires of them and her relationships are inevitably short-lived.</p>
+				</section>	
+			</section>
+
+			<section class="grid-item hidden grid-container" id="product3">
+				<img class="grid-detail1" src="http://via.placeholder.com/600x480">
+				<section class="grid-detail2">
+					<h4>Fenneko</h4>
+					<p>She entered the company at the same time as Aggretsuko and the two vent to each other about the angst they feel toward their bosses.While they get along on the surface, Aggretsuko believes that Fenneko is a frenemy that talks behind her back. This fox can be difficult, but she is nowhere near as bad as Aggretsuko believes.</p>
+				</section>
+			</section>
+
+		</section>
+
+
+		<section>
+			<a name='lottery'></a>
+			<img src="./media/TsuboneStandIn.png">
 			<h2>Game</h2>
 			<p>test the button</p>
 			<button name="gButton" id="gButton" onclick="guessGame()">Try Me</button>
 			<p id="printGuess"></p>
 			<p id="printResult"></p>
 		</section>
+
 		<section>
+			<a name='contact'></a>
 			<h2>Contact Form</h2>
 			<form>
-				<label for="fName">First Name</label>
-				<input type="text" id="fName" name="firstName" placeholder="First name">
-				<label for="lName">Last Name</label>
-				<input type="text" id="lName" name="lastName" placeholder="Last name">
+				<fieldset>
+					<legend>contact preference</legend>
+					<input type="radio" id="emailMe" name="emailMe" value="emailMe">
+					<label for="emailMe">Email Me</label>
+					<input type="radio" id="callMe" name="callMe" value="callMe">
+					<label for="callMe">Call Me</label>
+				</fieldset><span></span>
+				<label for="fName">Full Name</label>
+				<input type="text" id="fullName" name="fullName" placeholder="Full name">
 				<label for="phone">Phone</label>
 				<input type="tel" id="phone" name="phoneNumber" placeholder="Phone number">
 				<label for="address">Address</label>
@@ -64,10 +89,7 @@
 				<input type="text" id="email" name="email" placeholder="Email">
 				<label for="comments">Comments</label>
 				<input type="text" id="comments" name="comments" placeholder="Type your comment here">
-				<input type="radio" id="emailMe" name="emailMe" value="emailMe">
-				<label for="emailMe">Email Me</label>
-				<input type="radio" id="callMe" name="callMe" value="callMe">
-				<label for="callMe">Call Me</label>
+				<input type="submit" id="mySubmit">
 			</form>
 		</section>
 		<footer>Copyright &copy; 2020</footer>
