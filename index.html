@@ -4,35 +4,35 @@
 		<meta charset="utf-8">
 		<title>Aggretsuko</title>
 		<meta name="author" content="Angela Valenzuela">
-		<link rel="stylesheet" href="https://use.typekit.net/gtm7ueb.css">
+		<link rel="stylesheet" href="https://use.typekit.net/hot8aoz.css">
 		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
-		<header><h1>Aggretsuko</h1>
+		<header>
 			<nav>
 				<ul>
-					<a href="#top"><li>Home</li></a><li> // </li>
-					<a href="#friend"><li>Friends</li></a><li> // </li>
-					<a href="#lottery"><li>Office Lottery</li></a><li> // </li>
+					<a class="selected" href="#"><li>Home</li></a>
+					<a href="#friend"><li>Friends</li></a>
+					<a href="#lottery"><li>Office Lottery</li></a>
 					<a href="#contact"><li>Contact Us</li></a>
 				</ul>
 			</nav>
 		</header>
 
-		<section id="toggleMe">
-			<a name='top'></a>
-			<img class="span1" src="./media/placeHolderAggretsuko.png">
-			<img class="span2" src="./media/retsuko.png">
-			<button  class="span3" type="button" name="sButton" id="sButton">Go to Karaoke</button>
+		<section id="retsukoH">
+			<h1>Aggretsuko</h1>
+			<img id="retsukoImg" class="span2" src="./media/retsuko350px.png">
+			<img id="darkRetsukoImg" class="span2 hidden" src="./media/Aggretsuko350px.png">
+			<button  class="span3" type="button" name="sButton" id="sButton">Dark Mode</button>
 		</section>
 		<ul>
-			<li class="pointer" id="product1-name">gori</li><li> // </li>
-			<li class="pointer"  id="product2-name">washimi</li><li> // </li>
+			<li class="pointer" id="product1-name">gori</li>
+			<li class="pointer"  id="product2-name">washimi</li>
 			<li class="pointer"  id="product3-name">fenneko</li>
 		</ul>
 		<section>
 			<section class="grid-item hidden grid-container" id="product1">
-				<img class="grid-detail1" src="http://via.placeholder.com/600x480">
+				<img src="./media/DirectorGori350px.png">
 				<section class="grid-detail2">
 				<h4>Gori</h4>
 					<p>This female director of marketing is talented and hardworking. She is a daunting figure on the outside, but is surprisingly delicate on the inside and often finds it hard to say what is on her mind. She dresses in cool, conservative fashion, but comments about her physical appearance hurt and she frequently cries herself to sleep at night.</p>
@@ -40,7 +40,7 @@
 			</section>
 
 			<section class="grid-item grid-container" id="product2">
-				<img class="grid-detail1" src="http://via.placeholder.com/600x480">
+				<img src="./media/Washimi350px.png">
 				<section class="grid-detail2">
 					<h4>Washimi</h4>
 					<p>She's the talented and beautiful secretary of the President that has a knack for being able to meet all his needs. However, she is fed up with his mental weakness and the way he treats people. She is cool under pressure at work, but will 'let her feathers down' when it comes to the opposit sex. On dates, she uses her long legs to wow potential suitors, even though she soon tires of them and her relationships are inevitably short-lived.</p>
@@ -48,7 +48,7 @@
 			</section>
 
 			<section class="grid-item hidden grid-container" id="product3">
-				<img class="grid-detail1" src="http://via.placeholder.com/600x480">
+				<img src="./media/Fenneko350px.png">
 				<section class="grid-detail2">
 					<h4>Fenneko</h4>
 					<p>She entered the company at the same time as Aggretsuko and the two vent to each other about the angst they feel toward their bosses.While they get along on the surface, Aggretsuko believes that Fenneko is a frenemy that talks behind her back. This fox can be difficult, but she is nowhere near as bad as Aggretsuko believes.</p>
@@ -60,36 +60,44 @@
 
 		<section>
 			<a name='lottery'></a>
-			<img src="./media/TsuboneStandIn.png">
-			<h2>Game</h2>
-			<p>test the button</p>
-			<button name="gButton" id="gButton" onclick="guessGame()">Try Me</button>
-			<p id="printGuess"></p>
-			<p id="printResult"></p>
+			<img src="./media/Tsubone350px.png">
+			<section class="grid-detail2">
+				<h2>Feeling Lucky?!</h2>
+				<p>If you worked in an office with Tsubone, would you guess the correct number and leave early? Or would your bad luck land you in overtime? Play to find out!</p>
+				<button name="gButton" id="gButton" onclick="guessGame()">Guess a Number!</button>
+				<p>Your Guess: </p><p id="printGuess"></p>
+				<p>Winning Number: </p><p id="printResult"></p>
+			</section>
 		</section>
 
 		<section>
 			<a name='contact'></a>
-			<h2>Contact Form</h2>
-			<form>
+			<h2>Contact Us</h2>
+			<p>If you have any burning questions for our staff, send us a message and we'll be sure to get back to you soon!</p>
+			<h3>Send a message</h3>
+			<form id="newMsg">
+
+				<label for="fName">Full Name:*</label>
+				<input type="text" id="fullName" name="fullName" placeholder="Full name" required>
+				
+				<label for="phone">Phone</label>
+				<input type="tel" id="phone" name="phoneNumber" placeholder="Phone number" required>
+				
+				<label for="email">Email</label>
+				<input type="text" id="email" name="email" placeholder="Email" required>
+				
+				<label for="comments">Comments:*</label>
+				<input type="text" id="comments" name="comments" placeholder="Type your comment here" required>
+				<input type="submit" id="mySubmit">
+
 				<fieldset>
-					<legend>contact preference</legend>
-					<input type="radio" id="emailMe" name="emailMe" value="emailMe">
+					<legend>Preferred method of contact</legend>
+					<input type="radio" id="emailMe" name="contactMe" value="emailMe" required checked>
 					<label for="emailMe">Email Me</label>
-					<input type="radio" id="callMe" name="callMe" value="callMe">
+					
+					<input type="radio" id="callMe" name="contactMe" value="callMe" required>
 					<label for="callMe">Call Me</label>
 				</fieldset><span></span>
-				<label for="fName">Full Name</label>
-				<input type="text" id="fullName" name="fullName" placeholder="Full name">
-				<label for="phone">Phone</label>
-				<input type="tel" id="phone" name="phoneNumber" placeholder="Phone number">
-				<label for="address">Address</label>
-				<input type="text" id="address" name="address" placeholder="Address">
-				<label for="email">Email</label>
-				<input type="text" id="email" name="email" placeholder="Email">
-				<label for="comments">Comments</label>
-				<input type="text" id="comments" name="comments" placeholder="Type your comment here">
-				<input type="submit" id="mySubmit">
 			</form>
 		</section>
 		<footer>Copyright &copy; 2020</footer>

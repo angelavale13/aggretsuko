@@ -1,17 +1,28 @@
 /*Author: Angela Valenzuela*/
+h1, li{
+	font-family: carilliantine, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
 h1{
-	visibility: hidden;
+	font-size:10em;
 }
 
 li{
 	list-style-type: none;
 	display: inline;
-	color: #707070;
-	font-family: rosella-solid, sans-serif;
-	font-style: normal;
-	font-weight: 400;
 	font-size: 1.5em;
+	padding: 0 15px;
 }
+
+a:link.darkMode {
+	color:#8a8aff;
+}
+a:visited.darkMode {
+	color:#f0ebf0;
+}
+
 
 a:link{
 	text-decoration: none;
@@ -21,23 +32,21 @@ a:visited{
 	text-decoration: none;
 }
 
-a:hover{
+a:hover, li:hover{
 	text-decoration: underline;
+	color:#ff4049;
 }
 
-a:active{
-	text-decoration: underline;
+
+body{
+	background-color: #f0ebf0;
+	color: #363636;
 }
 
-header, nav, section{
-	background-color: #FFE2E2;
-}
-
-#toggleMe{
-	background-color: pink;
+#retsukoH{
 	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	grid-gap: 10px;
+	grid-column: 2 / 4;
+	margin: 0 auto;
 }
 
 .span1{
@@ -56,8 +65,9 @@ header, nav, section{
 #sButton{
 	padding: 10px;
 }
-#toggleMe.metal{
-	background-color: red;
+.darkMode{
+	background-color: #363636;
+	color: #f0ebf0;
 }
 
 #viewDetails.hide{
@@ -68,7 +78,6 @@ header, nav, section{
 	display: grid;
 	max-width:80%; 
 	grid-template-columns: 7fr 3fr;
-	background-color: white;
 	margin: 0 auto;
 
 }
@@ -96,7 +105,7 @@ header, nav, section{
 }
 
 .grid-container h4{
-	font-family: rosella-solid, sans-serif;
+	font-family: carilliantine, sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 1.5em;
