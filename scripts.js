@@ -55,7 +55,7 @@ function guessGame(){
 	var randomNum = Math.floor(Math.random() * Math.floor(userGuess) + 1);
 	//console.log("entered:" + userGuess + "actual:" + randomNum);
 	var winner = "Looks like your got luck on your side, you win... this time.";
-	var loser = "/n Sorry part-timer, you have to pay your dues and put in some overtime. Try again next time.";
+	var loser = "Sorry part-timer, you have to pay your dues and put in some overtime. Try again next time.";
 	while(userGuess < 1 || userGuess > 10){
 		userGuess = prompt("Please enter a number that is between 1 and 10")
 	} 
