@@ -5,79 +5,100 @@
 		<title>Aggretsuko</title>
 		<meta name="author" content="Angela Valenzuela">
 		<link rel="stylesheet" href="https://use.typekit.net/hot8aoz.css">
+		<link rel="stylesheet" href="https://use.typekit.net/hot8aoz.css">
 		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
+		<h2 class="hidden">Aggretsuko Fan Site</h2>
 		<header>
+			<a id='top'></a>
 			<nav>
+				<h2 class="hidden">Navigation</h2>
 				<ul>
-					<a class="selected" href="#"><li>Home</li></a>
-					<a href="#friend"><li>Friends</li></a>
-					<a href="#lottery"><li>Office Lottery</li></a>
-					<a href="#contact"><li>Contact Us</li></a>
+					<li><a class="selected" href="#top">Home</a></li>
+					<li><a href="#friends">Friends</a></li>
+					<li><a href="#officeGame">Office Game</a></li>
+					<li><a href="#contact">Contact Us</a></li>
 				</ul>
 			</nav>
 		</header>
 
 		<section id="retsukoH">
-			<h1>Aggretsuko</h1>
-			<img id="retsukoImg" class="span2" src="./media/retsuko350px.png">
-			<img id="darkRetsukoImg" class="span2 hidden" src="./media/Aggretsuko350px.png">
+			<h1 id="retsukoTitle">I'm Retsuko</h1>
+			<h1 id="darkRetsukoTitle" class="hidden">Aggretsuko</h1>
+			<img id="retsukoImg" class="span2" src="./media/retsuko350px.png" alt="Office worker Retsuko">
+			<img id="darkRetsukoImg" class="span2 hidden" src="./media/Aggretsuko350px.png" alt="Metal lover Aggretsuko">
 			<button  class="span3" type="button" name="sButton" id="sButton">Dark Mode</button>
 		</section>
-		<ul>
-			<li class="pointer" id="product1-name">gori</li>
-			<li class="pointer"  id="product2-name">washimi</li>
-			<li class="pointer"  id="product3-name">fenneko</li>
-		</ul>
-		<section>
-			<section class="grid-item hidden grid-container" id="product1">
-				<img src="./media/DirectorGori350px.png">
-				<section class="grid-detail2">
-				<h4>Gori</h4>
-					<p>This female director of marketing is talented and hardworking. She is a daunting figure on the outside, but is surprisingly delicate on the inside and often finds it hard to say what is on her mind. She dresses in cool, conservative fashion, but comments about her physical appearance hurt and she frequently cries herself to sleep at night.</p>
+		<section class="friendContains">
+			<a id='friends'></a>
+			<h2>Friends</h2>
+			<ul id="list2">
+				<li class="pointer" id="product1-name">gori</li>
+				<li class="pointer"  id="product2-name"> washimi</li>
+				<li class="pointer"  id="product3-name">fenneko</li>
+			</ul>
+			<section id="friendSection">
+				<h2 class="hidden">FriendContainer</h2>
+				<section class="hidden grid-container" id="product1">
+					<h2 class="hidden">FriendSection</h2>
+					<img src="./media/DirectorGori350px.png" alt="Office worker Gori">
+					<section class="grid-detail2">
+					<h3>Gori</h3>
+						<p>This female director of marketing is talented and hardworking. She is a daunting figure on the outside, but is surprisingly delicate on the inside and often finds it hard to say what is on her mind. She dresses in cool, conservative fashion, but comments about her physical appearance hurt and she frequently cries herself to sleep at night.</p>
+					</section>
+				</section>
+				<section class="grid-container" id="product2">
+					<h2 class="hidden">FriendSection</h2>
+					<img src="./media/Washimi350px.png" alt="Office worker Washimi">
+					<section class="grid-detail2">
+						<h3>Washimi</h3>
+						<p>She's the talented and beautiful secretary of the President that has a knack for being able to meet all his needs. However, she is fed up with his mental weakness and the way he treats people. She is cool under pressure at work, but will 'let her feathers down' when it comes to the opposite sex. On dates, she uses her long legs to wow potential suitors, even though she soon tires of them and her relationships are inevitably short-lived.</p>
+					</section>	
+				</section>
+				<section class="hidden grid-container" id="product3">
+					<h2 class="hidden">FriendSection</h2>
+					<img src="./media/Fenneko350px.png" alt="Office worker Fenneko">
+					<section class="grid-detail2">
+						<h3>Fenneko</h3>
+						<p>She entered the company at the same time as Aggretsuko and the two vent to each other about the angst they feel toward their bosses. While they get along on the surface, Aggretsuko believes that Fenneko is a frenemy that talks behind her back. This fox can be difficult, but she is nowhere near as bad as Aggretsuko believes.</p>
+					</section>
+				</section>
+				<a id="back2top" href='#top'>Back to Top</a>
+		</section>
+		</section>
+		<section class="officeContains">
+			<a id='officeGame'></a>
+			<h2>Office Game</h2>
+			<section class="grid2-container">
+				<h2 class="hidden">OfficeGame</h2>
+				<img src="./media/Tsubone350px.png" alt="Office worker Tsbone">
+				<section class="grid2-detail2">
+					<h2>Feeling Lucky?!</h2>
+					<p>If you worked in an office with Tsubone, would you guess the correct number and leave early? Or would your bad luck land you in overtime? Play to find out!</p>
+					<button name="gButton" id="gButton" onclick="guessGame()">Guess a Number!</button>
+					<p>Your Guess: </p><p id="printGuess"></p>
+					<p>Winning Number: </p><p id="printResult"></p>
 				</section>
 			</section>
-
-			<section class="grid-item grid-container" id="product2">
-				<img src="./media/Washimi350px.png">
-				<section class="grid-detail2">
-					<h4>Washimi</h4>
-					<p>She's the talented and beautiful secretary of the President that has a knack for being able to meet all his needs. However, she is fed up with his mental weakness and the way he treats people. She is cool under pressure at work, but will 'let her feathers down' when it comes to the opposit sex. On dates, she uses her long legs to wow potential suitors, even though she soon tires of them and her relationships are inevitably short-lived.</p>
-				</section>	
-			</section>
-
-			<section class="grid-item hidden grid-container" id="product3">
-				<img src="./media/Fenneko350px.png">
-				<section class="grid-detail2">
-					<h4>Fenneko</h4>
-					<p>She entered the company at the same time as Aggretsuko and the two vent to each other about the angst they feel toward their bosses.While they get along on the surface, Aggretsuko believes that Fenneko is a frenemy that talks behind her back. This fox can be difficult, but she is nowhere near as bad as Aggretsuko believes.</p>
-				</section>
-			</section>
-
+			<a id="back2top" href='#top'>Back to Top</a>
 		</section>
-
-
-		<section>
-			<a name='lottery'></a>
-			<img src="./media/Tsubone350px.png">
-			<section class="grid-detail2">
-				<h2>Feeling Lucky?!</h2>
-				<p>If you worked in an office with Tsubone, would you guess the correct number and leave early? Or would your bad luck land you in overtime? Play to find out!</p>
-				<button name="gButton" id="gButton" onclick="guessGame()">Guess a Number!</button>
-				<p>Your Guess: </p><p id="printGuess"></p>
-				<p>Winning Number: </p><p id="printResult"></p>
-			</section>
-		</section>
-
-		<section>
-			<a name='contact'></a>
+		<section class="contactSection">
+			<a id='contact'></a>
 			<h2>Contact Us</h2>
 			<p>If you have any burning questions for our staff, send us a message and we'll be sure to get back to you soon!</p>
-			<h3>Send a message</h3>
-			<form id="newMsg">
+			<!-- <h3>Send a message</h3> -->
+			<form id="newMsg" novalidate>
+				<fieldset>
+					<legend>Preferred method of contact</legend>
+					<input type="radio" id="emailMe" name="contactMe" value="emailMe" required checked>
+					<label for="emailMe">Email Me</label>
+					
+					<input type="radio" id="callMe" name="contactMe" value="callMe" required>
+					<label for="callMe">Call Me</label>
+				</fieldset><span></span>
 
-				<label for="fName">Full Name:*</label>
+				<label for="fullName">Full Name:*</label>
 				<input type="text" id="fullName" name="fullName" placeholder="Full name" required>
 				
 				<label for="phone">Phone</label>
@@ -89,18 +110,10 @@
 				<label for="comments">Comments:*</label>
 				<input type="text" id="comments" name="comments" placeholder="Type your comment here" required>
 				<input type="submit" id="mySubmit">
-
-				<fieldset>
-					<legend>Preferred method of contact</legend>
-					<input type="radio" id="emailMe" name="contactMe" value="emailMe" required checked>
-					<label for="emailMe">Email Me</label>
-					
-					<input type="radio" id="callMe" name="contactMe" value="callMe" required>
-					<label for="callMe">Call Me</label>
-				</fieldset><span></span>
 			</form>
+			<a id="back2top" href='#top'>Back to Top</a>
 		</section>
-		<footer>Copyright &copy; 2020</footer>
+		<footer>Copyright &copy; 2020 // Angela Valenzuela</footer>
 		<script src="scripts.js"></script>
 	</body>
 </html>

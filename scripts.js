@@ -5,16 +5,14 @@ document.getElementById('sButton').addEventListener('click', function(){
 	document.getElementsByTagName("body")[0].classList.toggle('darkMode');
 	document.getElementById("retsukoImg").classList.toggle("hidden");
 	document.getElementById("darkRetsukoImg").classList.toggle("hidden");
+	document.getElementById("retsukoTitle").classList.toggle("hidden");
+	document.getElementById("darkRetsukoTitle").classList.toggle("hidden");
 	let links = document.getElementsByTagName("a");
 	for(let i = 0; i < links.length; i++){
 	 	links[i].classList.toggle('darkMode');
 	 }
 
 });
-
-
-
-
 
 //Display by default on page load and only one product should ever display on the screen at a time
 
@@ -48,10 +46,6 @@ function toggleProduct3(){
 document.getElementById('product3-name').addEventListener('click', toggleProduct3);
 
 
-
-
-
-
 //Generate random number that you display to screen (with what the user guessed) and either declare them a winner or try again
 //Possible Responses
 
@@ -61,7 +55,7 @@ function guessGame(){
 	var randomNum = Math.floor(Math.random() * Math.floor(userGuess) + 1);
 	//console.log("entered:" + userGuess + "actual:" + randomNum);
 	var winner = "Looks like your got luck on your side, you win... this time.";
-	var loser = "Sorry part-timer, you have to pay your dues and put in some overtime. Try again next time.";
+	var loser = "/n Sorry part-timer, you have to pay your dues and put in some overtime. Try again next time.";
 	while(userGuess < 1 || userGuess > 10){
 		userGuess = prompt("Please enter a number that is between 1 and 10")
 	} 
@@ -73,11 +67,8 @@ function guessGame(){
 		document.getElementById("printGuess").innerHTML = "" + userGuess;
 		document.getElementById("printResult").innerHTML = "" + randomNum + ". " + loser;
 	}
-
 }
 
-
-//validate form function
 function validateForm(event){
 	//prevent form submission while validating
 	event.preventDefault();
@@ -93,9 +84,9 @@ function validateForm(event){
 	//input values
 	let fName = document.getElementById("fullName").value;
 	let email = document.getElementById("email").value;
-	let emailMe = document.getElementById("email").checked;
+	let emailMe = document.getElementById("emailMe").checked;
 	let phone = document.getElementById("phone").value;
-	let callMe = document.getElementById("phone").checked;
+	let callMe = document.getElementById("callMe").checked;
 	let comments = document.getElementById("comments").value;
 
 	//reset border styles on inputs
@@ -112,6 +103,19 @@ function validateForm(event){
 
 	//variable to track if form is valid or not
 	let isValid = true;
+  let emailRequired = false;
+
+	//if phone radio is checked then phone field must not be empty
+	if(document.getElementById("callMe").checked){
+		//document.getElementById("phone").value != ""; 
+    emailRequired = false;
+	}
+
+	//if email radio is checked then email field must not be empty
+	if(document.getElementById("emailMe").checked){
+		//document.getElementById("email").value != "";
+    emailRequired = true;
+	}
 
 	if(fName === ""){
 		isValid = false;
@@ -120,27 +124,23 @@ function validateForm(event){
 	}
 
 	//check if email address matches regex pattern
-	if(email === "" || !(emailRegex.test(email))){
+	if(emailRequired && !(emailRegex.test(email))){
 		isValid = false;
 		document.getElementById("email").style.border = "2px solid red";
 		document.getElementById("email").nextSibling.innerHTML = "Please enter a valid email address";
 	}
 
 	//check if phone number is only 10 numbers
-	if(phone === "" || !(phoneRegex.test(phone)) || !(parseInt(phone)) || phone.length !== 10){
+	if(!emailRequired && (!(phoneRegex.test(phone)) || !(parseInt(phone)) || phone.length !== 10)){
 		isValid = false;
 		document.getElementById("phone").style.border = "2px solid red";
 		document.getElementById("phone").nextSibling.innerHTML = "Please enter a valid 10 digit phone number";
 	}
 
-	//if phone radio is checked then phone field must not be empty
-	if(callMe){
-		document.getElementById("phone").innerHTML != ""; 
-	}
-
-	//if email radio is checked then email field must not be empty
-	if(emailMe){
-		document.getElementById("email").innerHTML != "";
+	//check if there is a message
+	if(comments.length < 1){
+	  isValid = false;
+	  document.getElementById("comments").style.border = "2px solid red";
 	}
 
 	//if the form is valid, submit
@@ -158,11 +158,14 @@ function validateForm(event){
 	    phone = document.getElementById("phone").style.backgroundColor = "white";
 	    phone = document.getElementById("phone").value = "";
 	    callMe = document.getElementById("phone").checked = false;
+	    comments = document.getElementById("comments").style.backgroundColor = "white";
+	    comments = document.getElementById("comments").value = "";
 
 	    //clear error messages
 	    document.getElementById("fullName").nextSibling.innerHTML = "";
 	    document.getElementById("email").nextSibling.innerHTML = "";
 	    document.getElementById("phone").nextSibling.innerHTML = "";
+	    document.getElementById("comments").nextSibling.innerHTML = "";
 	    document.querySelector("fieldset").nextSibling.innerHTML = "";
 	}
 }
