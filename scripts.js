@@ -141,6 +141,7 @@ function validateForm(event){
 	if(comments.length < 1){
 	  isValid = false;
 	  document.getElementById("comments").style.border = "2px solid red";
+	  document.getElementById("comments").nextSibling.innerHTML = "Please enter a comment";
 	}
 
 	//if the form is valid, submit
