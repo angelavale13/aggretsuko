@@ -73,11 +73,12 @@ p, span, #mySubmit, #gButton, #sButton{
 	font-family: objektiv-mk1,sans-serif;
 	font-weight: 400;
 	font-style: normal;
+}
+
+#mySubmit, #gButton, #sButton{
 	background-color: #f0ebf0;
 	color: #363636;
 }
-
-
 
 h1{
 	font-size:8em;
