@@ -73,6 +73,8 @@ p, span, #mySubmit, #gButton, #sButton{
 	font-family: objektiv-mk1,sans-serif;
 	font-weight: 400;
 	font-style: normal;
+	background-color: #f0ebf0;
+	color: #363636;
 }
 
 
@@ -211,8 +213,7 @@ hr{
 .grid2-container{
 	display: grid;
 	grid-template-columns: 2fr 4fr;
-	margin: 0 0 3em;
-	max-height: 725px;
+	padding: 2em 0 0;
 }
 
 .officeContains, .friendContains, .contactSection{
@@ -264,7 +265,6 @@ hr{
 
 .contactSection h2, .contactSection h3{
 	font-size: 2em;
-	padding: 20px;
 }
 
 .contactSection p{
@@ -281,8 +281,8 @@ hr{
 
 
 form{
-	width: 500px;/*
-	margin: 0 100px;*/
+	width: 500px;
+	margin: 0 auto;
 	padding: 1em;
 	font-size: 30px;
 }
