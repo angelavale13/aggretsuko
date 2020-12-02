@@ -28,9 +28,11 @@
 			<h1 id="darkRetsukoTitle" class="hidden">Aggretsuko</h1>
 			<img id="retsukoImg" class="span2" src="./media/retsuko350px.png" alt="Office worker Retsuko">
 			<img id="darkRetsukoImg" class="span2 hidden" src="./media/Aggretsuko350px.png" alt="Metal lover Aggretsuko">
-			<button  class="span3" type="button" name="sButton" id="sButton">Dark Mode</button>
+			<!-- <div class="divButton1"> --><button  class="span3" type="button" name="sButton" id="sButton">Dark Mode</button><!-- <div> -->
 		</section>
+		
 		<section class="friendContains">
+			<hr>
 			<a id='friends'></a>
 			<h2>Friends</h2>
 			<ul id="list2">
@@ -64,8 +66,9 @@
 						<p>She entered the company at the same time as Aggretsuko and the two vent to each other about the angst they feel toward their bosses. While they get along on the surface, Aggretsuko believes that Fenneko is a frenemy that talks behind her back. This fox can be difficult, but she is nowhere near as bad as Aggretsuko believes.</p>
 					</section>
 				</section>
-				<a class="back2top" href='#top'>Back to Top</a>
 		</section>
+		<a class="back2top" href='#top'>Back to Top</a>
+		<hr>
 		</section>
 		<section class="officeContains">
 			<a id='officeGame'></a>
@@ -76,12 +79,13 @@
 				<section class="grid2-detail2">
 					<h2>Feeling Lucky?!</h2>
 					<p>If you worked in an office with Tsubone, would you guess the correct number and leave early? Or would your bad luck land you in overtime? Play to find out!</p>
-					<button name="gButton" id="gButton" onclick="guessGame()">Guess a Number!</button>
+					<div class="divButton2"><button name="gButton" id="gButton" onclick="guessGame()">Guess a Number!</button></div>
 					<p>Your Guess: </p><p id="printGuess"></p>
 					<p>Winning Number: </p><p id="printResult"></p>
 				</section>
 			</section>
 			<a class="back2top" href='#top'>Back to Top</a>
+			<hr>
 		</section>
 		<section class="contactSection">
 			<a id='contact'></a>
@@ -112,6 +116,7 @@
 				<input type="submit" id="mySubmit">
 			</form>
 			<a class="back2top" href='#top'>Back to Top</a>
+			<hr>
 		</section>
 		<footer>Copyright &copy; 2020 // Angela Valenzuela</footer>
 		<script src="scripts.js"></script>
